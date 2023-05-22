@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+// @ts-nocheck
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-player',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent {
+
+  @Input() name;
 
 }
