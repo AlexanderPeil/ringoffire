@@ -1,6 +1,6 @@
 // @ts-nocheck
 export class Game {
-    public players: string[] = ['Leoni', 'Jessi', 'Alex'];
+    public players: string[] = [];
     public stack: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
