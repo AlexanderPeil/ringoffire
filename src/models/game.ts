@@ -1,7 +1,8 @@
+// @ts-nocheck
 export class Game {
     public players: string[] = [];
     public stack: string[] = [];
-    public playerCard: string[] = [];
+    public playedCards: string[] = [];
     public currentPlayer: number = 0;
 
     constructor() {
@@ -16,7 +17,7 @@ export class Game {
 }
 
 
-function shuffle(array: any[]) {
+function shuffle(array) {
     let currentIndex = array.length;
     let temporaryValue;
     let randomIndex;
