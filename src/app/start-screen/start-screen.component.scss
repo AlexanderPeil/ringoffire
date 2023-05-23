@@ -30,7 +30,7 @@
 
 .start-headline {
     position: absolute;
-    top: 18%;
+    top: 28%;
     width: 75.5vw;
     height: auto;
     text-align: center;
@@ -38,11 +38,13 @@
     padding: 0 100px;
     border-radius: 20px;
     border: 5px solid #e9b22a;
+    line-height: unset !important;
 
-    p {
+    span {
         font-size: 100px;
         color: white;
         font-weight: 800;
         text-shadow: 4px 3px #e9b22a;
+        line-height: unset;
     }
 }
