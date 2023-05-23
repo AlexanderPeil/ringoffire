@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/models/game';
-import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 
 @Component({
@@ -31,7 +31,7 @@ export class GameComponent implements OnInit {
       this.pickCardAnimation = true;
 
       this.game.currentPlayer++;
-      this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;     
+      this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
       setTimeout(() => {
         this.game.playedCards.push(this.currentCard);
         this.pickCardAnimation = false;
@@ -46,7 +46,7 @@ export class GameComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((name: string) => {
-      if(name && name.length > 0) {
+      if (name && name.length > 0) {
         this.game.players.push(name);
       }
     });
