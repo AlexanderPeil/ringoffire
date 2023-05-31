@@ -31,6 +31,10 @@ export class GameInfoComponent implements OnInit, OnChanges {
 
   }
 
+
+/**
+ * If the card value is provided, then updates the properties of title and description.
+ */
   ngOnChanges(): void {
     if (this.card) {
       console.log('Current card is:', this.card);

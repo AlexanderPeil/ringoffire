@@ -1,10 +1,17 @@
 // @ts-nocheck
+/**
+ * Represents a game with all needed arrays (all players, card stack, played cards and the current player)
+ */
 export class Game {
     public players: string[] = [];
     public stack: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
 
+    /**
+     * Constructs a new instance of the Game class.
+     * Initializes the stack of cards and shuffles them.
+     */
     constructor() {
         for (let i = 1; i < 14; i++) {
             this.stack.push('spade_' + i);
@@ -17,6 +24,10 @@ export class Game {
 }
 
 
+/**
+ * Shuffles the elements of an array in place.
+ * @param {Array} array - The array to be shuffled.
+ */
 function shuffle(array) {
     let currentIndex = array.length;
     let temporaryValue;

@@ -23,3 +23,24 @@
 <button mat-fab color="primary" (click)="openDialog()" class="btn-add">
     <mat-icon>add</mat-icon>
 </button>
+
+
+<!-- Code line 1 + 2:
+This section uses the *ngFor directive to iterate over the game.players array and create an <app-player> component for each player. 
+The let i = index part assigns the index of each player in the loop to the i variable. 
+The [ngStyle] binding applies inline styles to position each player vertically using the top property. 
+The [playerActive] binding determines whether a player is active based on whether their index matches the game.currentPlayer index. 
+The [name] binding assigns the player value as the name for each player. The class="player-position" applies a CSS class to style the player component. -->
+
+
+<!-- The rest of the code:
+This section represents a card stack in the UI. It uses the *ngFor directive to iterate over the [0, 1, 2, 3] array and create an <img> element for each item. 
+The let i = index assigns the index of each iteration to the i variable. 
+The [ngStyle] binding applies inline styles to position each card horizontally using the right property. 
+The src attribute is dynamically bound to display card cover images from the assets folder. 
+There is also an <img> element for the top card that triggers the takeCard() method when clicked.
+Following that, there is a section to display the played cards. 
+It uses the *ngFor directive to iterate over the game.playedCards array and display <img> elements for each card, 
+using the src attribute to dynamically bind the card images from the assets folder.
+Lastly, there is an <img> element for the current card animation. 
+It conditionally renders the image based on the pickCardAnimation flag and uses the src attribute to bind the image dynamically based on the currentCard value.  -->
