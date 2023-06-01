@@ -1,9 +1,9 @@
 // @ts-nocheck
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/models/game';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
@@ -25,20 +25,19 @@ export class GameComponent implements OnInit {
   currentCard: string = '';
   game: Game;
 
-  constructor (private firestore: AngularFirestore, public dialog: MatDialog) {
-
-  }
+  constructor (private firestore: AngularFirestore, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.newGame();
     this.firestore.collection('games').valueChanges().subscribe((game) => {
-      console.log(game);
+      console.log('Game update', game);
     });
   }
 
   newGame() {
     this.game = new Game();
-    console.log(game);
+    this.firestore.collection('games').add(this.game.toJson());
+    // console.log(game);
   }
 
 

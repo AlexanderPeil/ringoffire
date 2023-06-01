@@ -21,6 +21,15 @@ export class Game {
         }
         shuffle(this.stack);
     }
+
+    public toJson() {
+        return {
+            players: this.players,
+            stack: this.stack,
+            playedCards: this.playedCards,
+            currentPlayer: this.currentPlayer
+        };
+    }
 }
 
 
