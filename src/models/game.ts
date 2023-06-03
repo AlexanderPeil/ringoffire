@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 /**
  * Represents a game with all needed arrays (all players, card stack, played cards and the current player)
  */
